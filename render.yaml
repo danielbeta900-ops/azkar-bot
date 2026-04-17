@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: islamic-azkar-bot
+    env: node
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: NODE_ENV
+        value: production
